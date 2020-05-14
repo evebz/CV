@@ -34,7 +34,7 @@ main{
 
 /*format particulier pour ecrans <1280px - structure générale de la page*/
 
-@media handheld and (max-width: 800px){
+@media handheld and (max-width: 1200px){
 	body{
 		display: grid;
 		grid-template-columns: 2; 
