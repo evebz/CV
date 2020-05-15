@@ -2,7 +2,7 @@
 
 body{
 	display: grid;
-	grid-template-columns: 25% 75%; 
+	grid-template-columns: 2; 
 	grid-template-rows: 2;
 	font-family: arial;
 }
@@ -10,14 +10,14 @@ body{
 	background-color: #FECA07;
 	grid-column: 1;
 	grid-row : 1 ; 
-	min-width: 225px;
+	min-width: 180px;
 }
 
 #info_perso{
 	background-color: #FECA07;
 	grid-column: 1;
 	grid-row : 2 / span 3; 
-	min-width: 225px;
+	min-width: 180px;
 	overflow-wrap: break-word;
 }
 
@@ -30,17 +30,17 @@ main{
 	grid-column: 2;
 	grid-row: 2;
 	margin-left: 15px;
+	margin-top: 15px;
 }
 
 /*format particulier pour ecrans <1280px - structure générale de la page*/
 
 
-@media all and (max-width: 850px){
+@media screen and (max-width: 700px) {
 	body{
 		display: grid;
 		grid-template-columns: 2; 
 		grid-template-rows: 3;
-		grid-gap: 15px;
 	}
 	#section_photo{
 		background-color: white;
@@ -48,15 +48,15 @@ main{
 		grid-row : 1 ; 
 		min-width: 120px;
 	}
-	#info_perso{
-		grid-column: 1 /span 2;
-		grid-row : 2;
-		overflow-wrap: break-word;
-	}
 	header{
 		grid-column: 2;
 		grid-row: 1;
 	}
+	#info_perso{
+		grid-column: 1 /span 2;
+		grid-row : 2;
+	}
+	
 	main{
 		grid-column: 1 / span 2;
 		grid-row: 3;
@@ -164,30 +164,30 @@ h3{ /*titre de section dans les info perso*/
 	text-transform: uppercase;
 }
 
-ul{
-	list-style-type: none;
-	margin-left: 5px;
-	padding-left: 0px;
-	padding-bottom: 3px;
-	font-size: 0.7em;
-}
-
 .fa-at, .fa-phone-alt, .fa-map-marker-alt{
 	color: #404040;
 	padding: 2px 5px 5px 5px;
 }
 
-span{
-	font-size: 0.8em;
-	font-style: italic;
-	margin-left: 10px;
+ul{
+	list-style-type: none;
+	margin-left: 5px;
 	margin-right: 5px;
+	padding-left: 0px;
+	padding-bottom: 3px;
+	font-size: 0.9em;
 }
-
+#a_propos_de_moi{
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 0.9em;
+}
+	
 #loisirs{
 	width: 60%;
 	position: relative;
 	text-align: center;
 	left: 20%;
-	top:5px;
+	margin-top:5px;
+	margin-bottom: 5px;
 }
