@@ -12,17 +12,20 @@
 
     <body>
 
+<!-- header comprenant le nom et prénom du CV, poste visé-->
         <header>
             <h1>
                 <em id="prenom">Evelyne</em>BASTIN <br>
                 <span id="metier">Developpeuse Web Freelance</span> 
             </h1>
         </header>
-        
+
+<!--photo dans une section "a part" afin de faciliter la mise en forme responsive-->       
         <section id="section_photo">
         	<div id="photo"></div>
         </section>   
-        
+
+<!-- section information personnelles et contacts -->
         <section id="info_perso">  
             <h3>contact</h3>
             <ul>
@@ -34,7 +37,7 @@
             </ul>
             
             <h3>a propos de moi</h3>
-            <span>blablabla balbla ggg hhhddd</span>
+            <span id="a_propos_de_moi">blablabla balbla ggg hhhddd</span> <!--je ne suis pas convaincue par la balise utilisée....-->
             
             <h3>loisirs</h3>
             <table id="loisirs">
@@ -48,110 +51,123 @@
            </table>
         </section>
 
+<!--contenu principal du CV : formation, expérience professionnelle et recommandations-->
         <main>
+        <!--FORMATION-->    
             <h2><i class="fas fa-graduation-cap fa-1x"></i>Formation</h2>
-            
-            <table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2020, Niort</td>
-            		<td><h4>OpenClassRooms</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Developpeur Web</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p>Formation en ligne, blablabla</p></td>
-            	</tr>
-            </table>      
-                		
-            <table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2018, Nantes</td>
-            		<td><h4>IAE</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Management et administration d'entreprise</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p>Formation, blablabla</p></td>
-            	</tr>
-            </table>   
-
-			<table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2005, Dublin</td>
-            		<td><h4>Development Studies Center</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Gestion de projet de développement international</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p>Formation, blablabla</p></td>
-            	</tr>
-            </table>   
-           <table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2002, Grenoble</td>
-            		<td><h4>Institut de Géographie Alpine</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Ingénierie du développement territorial</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p>Formation, blablabla</p></td>
-            	</tr>
-            </table>	 
             	
-            
+            	<table> <!--formation 1-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2020, Niort</td>
+	            		<td><h4>OpenClassRooms</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Developpeur Web</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p>Formation en ligne, blablabla</p></td>
+	            	</tr>
+	            </table>      
+	            <table> <!--formation 2-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2018, Nantes</td>
+	            		<td><h4>IAE</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Management et administration d'entreprise</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p>Formation, blablabla</p></td>
+	            	</tr>
+	            </table>   
+				<table> <!--formation 3-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2005, Dublin</td>
+	            		<td><h4>Development Studies Center</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Gestion de projet de développement international</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p>Formation, blablabla</p></td>
+	            	</tr>
+	            </table>   
+	           	<table> <!--formation 4-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2002, Grenoble</td>
+	            		<td><h4>Institut de Géographie Alpine</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Ingénierie du développement territorial</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p>Formation, blablabla</p></td>
+	            	</tr>
+	            </table>	 
+	            	
+	    <!--EXP. PRO-->           
             <h2><i class="fas fa-briefcase fa-1x"></i>Expérience professionnelle</h2>
             
-            <table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2018 - Auj., Niort</td>
-            		<td><h4>Prodev-O</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Conseil en innovation organisationnelle</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p> blablabla</p></td>
-            	</tr>
-            </table>	
-
-			<table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2014-2017, Ouagadougou (Burkina Faso)</td>
-            		<td><h4>SOS Sahel International France</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Responsable du suivi et évaluation des programmes</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p> blablabla</p></td>
-            	</tr>
-            </table>
-            <table>
-            	<tr>
-            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-            		<td rowspan="3" class="annee">2011-2014, Ouagadougou (Burkina Faso)</td>
-            		<td><h4>Sos Sahel International France</h4></td>
-            	</tr>
-            	<tr>
-            		<td><h5>Chargée de projet</h5></td>
-            	</tr>
-            	<tr>
-            		<td><p> blablabla</p></td>
-            	</tr>
-            </table>
-
+	            <table> <!--expérience 1-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2018 - Auj., Niort</td>
+	            		<td><h4>Prodev-O</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Conseil en innovation organisationnelle</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p> blablabla</p></td>
+	            	</tr>
+	            </table>	
+				<table> <!--expérience 2-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2014-2017, Ouagadougou (Burkina Faso)</td>
+	            		<td><h4>SOS Sahel International France</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Responsable du suivi et évaluation des programmes</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p> blablabla</p></td>
+	            	</tr>
+	            </table>
+	            <table> <!--expérience 3-->
+	            	<tr>
+	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
+	            		<td rowspan="3" class="annee">2011-2014, Ouagadougou (Burkina Faso)</td>
+	            		<td><h4>Sos Sahel International France</h4></td>
+	            	</tr>
+	            	<tr>
+	            		<td><h5>Chargée de projet</h5></td>
+	            	</tr>
+	            	<tr>
+	            		<td><p> blablabla</p></td>
+	            	</tr>
+	            </table>
+	    <!--RECOMMANDATIONS-->           
             <h2><i class="fas fa-pencil-alt fa-1x"></i>Recommandations</h2>
-            
+            	<table>
+	            	<tr>
+	            		<td>
+	            			<em>Mr Stephane TORCHY</em>
+	            			<br>fonction
+	            			<br>contact
+	            			<br> LinkedIn ou autre ref. sur le web
+	            		</td>
+	            		<td>
+	            			<em>Mr Gabriel GIACOMMETTI</em>
+	            			<br>Directeur Clinique Claude Bernard - Metz
+	            			<br>contact
+	            		</td>
+	            	</tr>
+            	</table>
         </main>
     
     </body>
