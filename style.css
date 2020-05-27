@@ -1,6 +1,7 @@
 /*@font-face{}*/
 
-:root{
+:root
+{ /*il y a une erreur dans mon ecriture mais je ne la vois pas et la variable fonctionne quand meme*/
   --picto-display:flex;
   --picto-margin-left:15%;
   --picto-padding-top:5px;
@@ -9,10 +10,11 @@
   --fct-color:blue;
   --detail-color:grey;
 }
+
 body{
 	display: grid;
-	grid-template-columns: 1fr 3fr; 
-	grid-template-rows: 2;
+	grid-template-columns:1fr 3fr; 
+	grid-template-rows: 2fr;
 	font-family: arial;
 }
 
@@ -26,6 +28,7 @@ header{
 	grid-column: 1;
 	grid-row : 2 / span 3; 
 	min-width: 200px;
+	max-width: 280px;
 	overflow-wrap: break-word;
 	margin-top: 0px;
 }
@@ -33,22 +36,25 @@ header{
 	background-color: #FECA07;
 	grid-column: 1;
 	grid-row:1;
+	min-width: 200px;
+	max-width: 280px;
 }
 main{
 	grid-column: 2;
 	grid-row: 2;
-	margin-left: 15px;
-	margin-top: 15px;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding-top: 0px;
 }
 
 /* dans l'entete */
 
 h1{
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: lighter;
 	color: black;
-	padding-left: 10px;
-	margin-bottom: 10px;
+	padding: 0px 15px 0px 15px;
+	margin-bottom: 0px;
 }
 
 h1>em{
@@ -58,7 +64,7 @@ h1>em{
 }
 
 h1>span{
-	font-size: x-large;
+	font-size: medium;
 	font-weight: normal;
 	color: black;
 	padding-top: 3px;
@@ -73,11 +79,11 @@ h1>span{
 	padding-right: 1em;
 }
 
-h2{ /*titre de partie du CV relatif au parcours*/
+h2{ /*titre de partie du CV*/
 	color:black;
-	margin: 15px 5px 2px 0px;
+	margin: 10px 5px 2px 0px;
 	padding-bottom: 6px;
-	font-size: normal;
+	font-size: x-large;
 	font-weight: bold;
 	border-bottom: solid 2px #FECA07;
 }
@@ -146,7 +152,7 @@ tr:nth-child(n+3){
 }
 
 .detail{
-	font-size: normal;
+	font-size: medium;
 	margin: 0px 0px 2px 0px;
 	padding: 0px 0px 0px 0px;
   color: gray;
@@ -225,11 +231,16 @@ p{
    body{
 	 display: flex;
      flex-direction: column;
-		width: 100%;
+	width: 100%;
 	}
   #illustration{
   	display: none;
   }
+
+  #info_perso{
+  	max-width: 100%;
+  }
+
   .nouvel_enreg{
     width: 100px;
   }
