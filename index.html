@@ -7,9 +7,7 @@
 		<title>CV Evelyne Bastin</title>
  
         <link rel="stylesheet" href="style.css"/>
-        
         <script src="https://kit.fontawesome.com/ec30005b76.js" crossorigin="anonymous"></script>
-        	
         
     </head>
 
@@ -18,161 +16,88 @@
 <!-- header comprenant le nom et prénom du CV, poste visé-->
         <header>
             <h1>
-                <em id="prenom">Evelyne</em>BASTIN <br>
-                <span id="metier">Developpeuse Web Freelance</span> 
+                <em>Evelyne</em>BASTIN<br>
+                <span>Developpeuse Web Freelance</span> 
             </h1>
         </header>
-
-<!--photo dans une section "a part" afin de faciliter la mise en forme responsive - NON-->    
-
-<!--remettrte dans un bloc commun-->   
-        <section id="section_photo">
-        	<div id="photo"></div>
-        </section>   
+  
 
 <!-- section information personnelles et contacts -->
-        <section id="info_perso">  
+        <div id="illustration">
+          <div id="photo_ID"></div>
+        </div>
+        <section id="info_perso">
             <h3>contact</h3>
             <ul>
             	<li><i class="fas fa-at"></i><a href="mailto:evelyne.bastin.z@gmail.com">evelyne.bastin.z@gmail.com </a></li>
             	<li><i class="fas fa-phone-alt"></i>06 33 54 09 96</li>
-            	<li>
-            		<address><i class="fas fa-map-marker-alt"></i>20 rue de la Colline - 79000 NIORT</address>
-            	</li>
+            	<li><i class="fas fa-map-marker-alt"></i>20 rue de la Colline - 79000 NIORT</li>
             </ul>
             
             <h3>a propos de moi</h3>
-            <span id="a_propos_de_moi">blablabla balbla ggg hhhddd</span> <!--je ne suis pas convaincue par la balise utilisée....-->
+            <p>blablabla balbla ggg hhhddd</p>
             
-            <h3>loisirs</h3> <!--utiliser flexbox-->
-            <table id="loisirs">
-            	<tbody>
-            		<tr>
-            			<td><i class="fas fa-hiking fa-3x"></i></td>
-            			<td><img src="https://img.icons8.com/ios-glyphs/50/000000/dancing.png"/></td>
-            			<td><i class="fas fa-globe-africa fa-3x"></i></td>
-            		</tr>
-            	</tbody>
-           </table>
+            <h3>loisirs</h3>
+          <div>
+            <div class="picto"><i class="fas fa-hiking fa-3x"></i></i></div>
+            <div class="picto"><img src="https://img.icons8.com/ios-glyphs/50/000000/dancing.png"/></i></div>
+            <div class="picto"><i class="fas fa-globe-africa fa-3x"></i></i></div>
+          </div>
         </section>
 
 <!--contenu principal du CV : formation, expérience professionnelle et recommandations-->
         <main> 
         <!--FORMATION-->    
-            <h2><i class="fas fa-graduation-cap fa-1x"></i>Formation</h2>
-            	<!--remettre dans une seule table en utilisant la structure de table 1. Formation 2. Exp.Pro-->
-            	<table> <!--formation 1-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td> <!-- point a revoir-->
-	            		<td rowspan="3" class="annee">2020, Niort</td>
-	            		<td><h4>OpenClassRooms</h4></td> <!-- point a revoir--> <!-- utiliser les balises nth-- a faire dans codepen-->
-	            	</tr>
-	            	<tr>
-	            		<td><h5>Developpeur Web</h5></td>
-	            	</tr>
-	            	<tr>
-	            		<td><p>Formation en ligne, blablabla</p></td>
-	            	</tr>
-	            </table>      
-	            <table> <!--formation 2-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-	            		<td rowspan="3" class="annee">2018, Nantes</td>
-	            		<td><h4>IAE</h4></td>
-	            	</tr>
-	            	<tr>
-	            		<td><h5>Management et administration d'entreprise</h5></td>
-	            	</tr>
-	            	<tr>
-	            		<td><p>Formation, blablabla</p></td>
-	            	</tr>
-	            </table>   
-				<table> <!--formation 3-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-	            		<td rowspan="3" class="annee">2005, Dublin</td>
-	            		<td><h4>Development Studies Center</h4></td>
-	            	</tr>
-	            	<tr>
-	            		<td><h5>Gestion de projet de développement international</h5></td>
-	            	</tr>
-	            	<tr>
-	            		<td><p>Formation, blablabla</p></td>
-	            	</tr>
-	            </table>   
-	           	<table> <!--formation 4-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-	            		<td rowspan="3" class="annee">2002, Grenoble</td>
-	            		<td><h4>Institut de Géographie Alpine</h4></td>
-	            	</tr>
-	            	<tr>
-	            		<td><h5>Ingénierie du développement territorial</h5></td>
-	            	</tr>
-	            	<tr>
-	            		<td><p>Formation, blablabla</p></td>
-	            	</tr>
-	            </table>	 
+            <section id="formation">
+              <h2><i class="fas fa-graduation-cap fa-1x"></i>Formation</h2>
+            	<table>
+                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i><em>2020, Niort</em></td> <td>OpenClassRooms</td></tr>
+	            	  <tr><td></td><td>Developpeur Web</td></tr>
+                <tr><td></td><td>Formation en ligne, blablabla</td></tr>
+              </table>
+              <table>
+                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2018, Nantes</td><td>IAE</td></tr>
+                  <tr><td></td><td>Managemenet administration d'entreprise</td></tr>
+	            	  <tr><td></td><td>Formation, blablabla</td></tr>
+              </table>
+              <table>
+                  <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2005, Dublin</td>
+	            		<td>Development Studies Center</td></tr>
+                  <tr><td></td><td>Gestion de projet de développement international</td></tr>
+	            	  <tr><td></td><td>Formation, blablabla</td></tr>
+                </table>
+                <table>
+                  <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2002, Grenoble</td>
+	            		<td>Institut de Géographie Alpine</td></tr>
+	            	  <tr><td></td><td>Ingénierie du développement territorial</td></tr>
+	            	  <tr><td></td><td>Formation, blablabla</td></tr>
+	             </table>	 
 	            	
-	    <!--EXP. PRO-->           
+	    <section id="exp_pro">           
             <h2><i class="fas fa-briefcase fa-1x"></i>Expérience professionnelle</h2>
-            
-	            <table> <!--expérience 1-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-	            		<td rowspan="3" class="annee">2018 - Auj., Niort</td>
-	            		<td><h4>Prodev-O</h4></td>
+            <table>
+              <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i><em>2018 - Auj., Niort</em></td><td class="structure">Prodev-O</td></tr>
+                <tr><td class="fonction">Conseil en innovation organisationnelle</td></tr>
+	            	<tr><td class="detail">blablabla</td></tr>
+	            	<tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2014-2017, Ouagadougou (Burkina Faso)</td><td class="structure">SOS Sahel International France</td>
 	            	</tr>
-	            	<tr>
-	            		<td><h5>Conseil en innovation organisationnelle</h5></td>
+	            	<tr><td class="fonction">Responsable du suivi et évaluation des programmes</td>
 	            	</tr>
-	            	<tr>
-	            		<td><p> blablabla</p></td>
+	            	<tr><td class="detail">pleins de choses intéressantes</td></tr>
+	            	<tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2011-2014, Ouagadougou (Burkina Faso)</td><td class="structure">SOS Sahel International France</td>
 	            	</tr>
-	            </table>	
-				<table> <!--expérience 2-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-	            		<td rowspan="3" class="annee">2014-2017, Ouagadougou (Burkina Faso)</td>
-	            		<td><h4>SOS Sahel International France</h4></td>
-	            	</tr>
-	            	<tr>
-	            		<td><h5>Responsable du suivi et évaluation des programmes</h5></td>
-	            	</tr>
-	            	<tr>
-	            		<td><p> blablabla</p></td>
-	            	</tr>
+	            	<tr><td class="fonction">Chef de projet</td></tr>
+	            	<tr><td class="detail">pleins de choses intéressantes</td></tr>
 	            </table>
-	            <table> <!--expérience 3-->
-	            	<tr>
-	            		<td rowspan="3"><i class="fas fa-circle"></i></td>
-	            		<td rowspan="3" class="annee">2011-2014, Ouagadougou (Burkina Faso)</td>
-	            		<td><h4>Sos Sahel International France</h4></td>
-	            	</tr>
-	            	<tr>
-	            		<td><h5>Chargée de projet</h5></td>
-	            	</tr>
-	            	<tr>
-	            		<td><p> blablabla</p></td>
-	            	</tr>
-	            </table>
-	    <!--RECOMMANDATIONS-->           
+      </section>
+      <section id="recommandation">      
             <h2><i class="fas fa-pencil-alt fa-1x"></i>Recommandations</h2>
-            	<table id="recommandations">
-	            	<tr>
-	            		<td>
-	            			<em>Mr Stephane TORCHY</em>
-	            			<br>fonction
-	            			<br>contact
-	            			<br> LinkedIn ou autre ref. sur le web
-	            		</td>
-	            		<td>
-	            			<em>Mr Gabriel GIACOMMETTI</em>
-	            			<br>Directeur Clinique Claude Bernard - Metz
-	            			<br>contact
-	            		</td>
-	            	</tr>
-            	</table>
+            <div>
+              <p><em>Mr Stephane TORCHY</em><br>fonction<br>contact<br> LinkedIn ou autre ref. sur le web</p><!--div n'est peut-être pas la bonne balise. qu'est ce qu'on peut mettre d'autre-->
+              <p><em>Mr Gabriel GIACOMMETTI</em><br>Directeur Clinique Claude Bernard - Metz<br>
+	            	contact</p>
+            </div>
+      </section>
         </main>
     
     </body>
