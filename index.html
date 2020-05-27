@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -8,24 +8,23 @@
  
         <link rel="stylesheet" href="style.css"/>
         <script src="https://kit.fontawesome.com/ec30005b76.js" crossorigin="anonymous"></script>
-        
     </head>
 
     <body>
-
-<!-- header comprenant le nom et prénom du CV, poste visé-->
-        <header>
+        <header><!-- header comprenant le nom et prénom du CV, poste visé-->
             <h1>
                 <em>Evelyne</em>BASTIN<br>
                 <span>Developpeuse Web Freelance</span> 
             </h1>
         </header>
   
-
-<!-- section information personnelles et contacts -->
-        <div id="illustration">
+        <section id="illustration"> 
+        <!--la manipulation de la photo me pose problème. Peut-être parce que tout est défini dans le css (mise en forme et contenu de "photo_ID")? Lorsque je la mets dans la section info_perso:
+         - la mise en forme n'est pas correcte/change (héritage de mise en forme de la section??) 
+         - je ne parviens pas à la "supprimer" dans le cadre d'affiche responsive petit écran-->
           <div id="photo_ID"></div>
-        </div>
+        </section>
+        
         <section id="info_perso">
             <h3>contact</h3>
             <ul>
@@ -39,65 +38,63 @@
             
             <h3>loisirs</h3>
           <div>
-            <div class="picto"><i class="fas fa-hiking fa-3x"></i></i></div>
-            <div class="picto"><img src="https://img.icons8.com/ios-glyphs/50/000000/dancing.png"/></i></div>
-            <div class="picto"><i class="fas fa-globe-africa fa-3x"></i></i></div>
+            <div class="picto"><i class="fas fa-hiking fa-3x"></i></div>
+            <div class="picto"><img src="https://img.icons8.com/ios-glyphs/50/000000/dancing.png" alt="dancing"></div>
+            <div class="picto"><i class="fas fa-globe-africa fa-3x"></i></div>
           </div>
         </section>
 
 <!--contenu principal du CV : formation, expérience professionnelle et recommandations-->
         <main> 
-        <!--FORMATION-->    
-            <section id="formation">
-              <h2><i class="fas fa-graduation-cap fa-1x"></i>Formation</h2>
-            	<table>
-                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i><em>2020, Niort</em></td> <td>OpenClassRooms</td></tr>
-	            	  <tr><td></td><td>Developpeur Web</td></tr>
-                <tr><td></td><td>Formation en ligne, blablabla</td></tr>
-              </table>
-              <table>
-                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2018, Nantes</td><td>IAE</td></tr>
-                  <tr><td></td><td>Managemenet administration d'entreprise</td></tr>
-	            	  <tr><td></td><td>Formation, blablabla</td></tr>
-              </table>
-              <table>
-                  <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2005, Dublin</td>
-	            		<td>Development Studies Center</td></tr>
-                  <tr><td></td><td>Gestion de projet de développement international</td></tr>
-	            	  <tr><td></td><td>Formation, blablabla</td></tr>
-                </table>
-                <table>
-                  <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2002, Grenoble</td>
-	            		<td>Institut de Géographie Alpine</td></tr>
-	            	  <tr><td></td><td>Ingénierie du développement territorial</td></tr>
-	            	  <tr><td></td><td>Formation, blablabla</td></tr>
-	             </table>	 
-	            	
-	    <section id="exp_pro">           
-            <h2><i class="fas fa-briefcase fa-1x"></i>Expérience professionnelle</h2>
-            <table>
-              <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i><em>2018 - Auj., Niort</em></td><td class="structure">Prodev-O</td></tr>
-                <tr><td class="fonction">Conseil en innovation organisationnelle</td></tr>
-	            	<tr><td class="detail">blablabla</td></tr>
-	            	<tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2014-2017, Ouagadougou (Burkina Faso)</td><td class="structure">SOS Sahel International France</td>
-	            	</tr>
-	            	<tr><td class="fonction">Responsable du suivi et évaluation des programmes</td>
-	            	</tr>
-	            	<tr><td class="detail">pleins de choses intéressantes</td></tr>
-	            	<tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2011-2014, Ouagadougou (Burkina Faso)</td><td class="structure">SOS Sahel International France</td>
-	            	</tr>
-	            	<tr><td class="fonction">Chef de projet</td></tr>
-	            	<tr><td class="detail">pleins de choses intéressantes</td></tr>
+          
+            <section id="formation"><!--FORMATION - 1 TABLEAU PAR ENREG.-->  
+	            <h2><i class="fas fa-graduation-cap fa-1x"></i>Formation</h2>
+	            <table>
+		            <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i><em>2020, Niort</em></td> <td>OpenClassRooms</td></tr>
+			        <tr><td></td><td>Developpeur Web</td></tr>
+		            <tr><td></td><td>Formation en ligne, blablabla</td></tr>
 	            </table>
-      </section>
-      <section id="recommandation">      
-            <h2><i class="fas fa-pencil-alt fa-1x"></i>Recommandations</h2>
-            <div>
-              <p><em>Mr Stephane TORCHY</em><br>fonction<br>contact<br> LinkedIn ou autre ref. sur le web</p><!--div n'est peut-être pas la bonne balise. qu'est ce qu'on peut mettre d'autre-->
-              <p><em>Mr Gabriel GIACOMMETTI</em><br>Directeur Clinique Claude Bernard - Metz<br>
-	            	contact</p>
-            </div>
-      </section>
+	            <table>
+	                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2018, Nantes</td><td>IAE</td></tr>
+	                <tr><td></td><td>Managemenet administration d'entreprise</td></tr>
+		            <tr><td></td><td>Formation, blablabla</td></tr>
+	            </table>
+	            <table>
+	                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2005, Dublin</td><td>Development Studies Center</td></tr>
+	                <tr><td></td><td>Gestion de projet de développement international</td></tr>
+		            <tr><td></td><td>Formation, blablabla</td></tr>
+	            </table>
+	            <table>
+	                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2002, Grenoble</td><td>Institut de Géographie Alpine</td></tr>
+		            <tr><td></td><td>Ingénierie du développement territorial</td></tr>
+		            <tr><td></td><td>Formation, blablabla</td></tr>
+		        </table>	 
+	         </section>
+
+	    	<section id="exp_pro"> <!--EXPERIENCE PRO - UN SEUL TABLEAU-->             
+            	<h2><i class="fas fa-briefcase fa-1x"></i>Expérience professionnelle</h2>
+            	<table>
+	              	<tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i><em>2018 - Auj., Niort</em></td><td class="structure">Prodev-O</td></tr>
+	                <tr><td class="fonction">Conseil en innovation organisationnelle</td></tr>
+		            <tr><td class="detail">blablabla</td></tr>
+	            
+		            <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2014-2017, Ouagadougou (Burkina Faso)</td><td class="structure">SOS Sahel International France</td></tr>
+		            <tr><td class="fonction">Responsable du suivi et évaluation des programmes</td></tr>
+		            <tr><td class="detail">pleins de choses intéressantes</td></tr>
+	            
+		            <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2011-2014, Ouagadougou (Burkina Faso)</td><td class="structure">SOS Sahel International France</td></tr>
+		            <tr><td class="fonction">Chef de projet</td></tr>
+		            <tr><td class="detail">pleins de choses intéressantes</td></tr>
+	            </table>
+      		</section>
+
+      		<section id="recommandation">      
+            	<h2><i class="fas fa-pencil-alt fa-1x"></i>Recommandations</h2>
+            	<div>
+              		<p><em>Mr Stephane TORCHY</em><br>fonction<br>contact<br> LinkedIn ou autre ref. sur le web</p><!--div n'est peut-être pas la bonne balise. qu'est ce qu'on peut mettre d'autre-->
+              		<p><em>Mr Gabriel GIACOMMETTI</em><br>Directeur Clinique Claude Bernard - Metz<br>contact</p>
+            	</div>
+      		</section>
         </main>
     
     </body>
