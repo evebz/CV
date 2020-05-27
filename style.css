@@ -1,18 +1,24 @@
 /*@font-face{}*/
 
+:root{
+  --picto-display:flex;
+  --picto-margin-left:15%;
+  --picto-padding-top:5px;
+  --picto-padding-bottom:10px;
+  --struct-color:red;
+  --fct-color:blue;
+  --detail-color:grey;
+}
 body{
 	display: grid;
 	grid-template-columns: 1fr 3fr; 
 	grid-template-rows: 2;
 	font-family: arial;
 }
-#section_photo{
-	background-color: #FECA07;
-	grid-column: 1;
-	grid-row : 1 ; 
-	min-width: 200px;
-	padding-bottom: 1em;
-	padding-top: 1em;
+
+header{
+	grid-column: 2;
+	grid-row: 1;
 }
 
 #info_perso{
@@ -21,47 +27,19 @@ body{
 	grid-row : 2 / span 3; 
 	min-width: 200px;
 	overflow-wrap: break-word;
+	margin-top: 0px;
 }
-
-header{
-	grid-column : 2;
-	grid-row: 1;
+#illustration{
+	background-color: #FECA07;
+	grid-column: 1;
+	grid-row:1;
 }
-
 main{
 	grid-column: 2;
 	grid-row: 2;
 	margin-left: 15px;
 	margin-top: 15px;
 }
-
-@media screen and (max-width: 1000px) {
-	body{
-		display: grid;
-		grid-template-columns: 2; 
-		grid-template-rows: 3;
-	}
-	#section_photo{
-		background-color: white;
-		grid-column: 1;
-		grid-row : 1 ; 
-		min-width: 120px;
-	}
-	header{
-		grid-column: 2;
-		grid-row: 1;
-	}
-	#info_perso{
-		grid-column: 1 /span 2;
-		grid-row : 2;
-	}
-	
-	main{
-		grid-column: 1 / span 2;
-		grid-row: 3;
-	}
-}
-
 
 /* dans l'entete */
 
@@ -73,19 +51,20 @@ h1{
 	margin-bottom: 10px;
 }
 
-#prenom{
+h1>em{
 	font-weight: bold;
 	color: #FECA07;
 	padding-right: 10px;
 }
 
-#metier{
+h1>span{
 	font-size: x-large;
 	font-weight: normal;
 	color: black;
 	padding-top: 3px;
 	margin-left: 1em;
 }
+
 
 /* dans le main*/
 
@@ -105,69 +84,107 @@ h2{ /*titre de partie du CV relatif au parcours*/
 table{
 	margin-bottom: 0.5em;
 }
-
 td{
-	vertical-align: top;
+  vertical-align: top;
+  padding-right:10px;
 }
 .fa-circle{
 	font-size: xx-small;
-	padding-right: 2em;
+	padding-right: 1em;
+}
+.nouvel_enreg{ /*comment faire pour que le retour à la ligne soit en retrait par rapport à l'icone(rond)*/
+  color: black;
+  font-size: 0.8em;
+  font-style: italic;
+  width: 150px;
+}
+.nouvel_enreg>em{
+  font-weight:bold;
 }
 
-.annee{
-	font-size: 0.9em;
-	padding: 5px 10px 0px 3px;
-	width: 80px;
+/*TABLEAU FORMATION - PERMIERE APPROCHE - UN TABLEAU PAR ENREG - mise en forme en fonction de la POSITION DE LA CELLULE et en utilisant des VARIABLES 
+
+Mise en forme suivant la position est aparu COMPLIQUE :
+    - comment mettre dans une meme forme toute les cellules de la deuxième colonne avec récurrence de mise en forme toute les 3 lignes (et non sur la base de paire / impaire et en évitant de devoir ajouter des balises pour dire "heu! non pas celle-la mais la prochaine")
+    - difficulté à définir la mise en forme par cellule, notamment quand la première est une fusion de plusieurs lignes
+    - démarche adoptée : mise en forme par ligne + class pour pouvoir faire une mise en forme spécifique de la cellule 1 ligne 1 
+
+Utilisation des variables css : pas trop d'intérêt ici compte tenu de la simplicité des contenus et le fait qu'il y ai "qu'une seule mise en forme" (pas plusieurs page avec les memes types de contenus mais des chartes graphiques différentes). Ici, l'utilisation des class est largement suffisant, voire plus simple et complet (cf. css pour le tableau expérience pro)*/
+
+
+tr:nth-child(n+1){
+  color:var(--struct-color);
 }
 
-h4{ /*centre de formation, entreprise*/
+tr:nth-child(n+2){
+	color: var(--fct-color);
+}
+
+tr:nth-child(n+3){
+  color: var(--detail-color)
+}
+
+
+
+/*TABLEAU EXPERIENCE PRO - DEUXIEME APPROCHE - UN SEUL TABLEAU ET UTILISATION DE CLASS POUR LA MISE EN FORME DES CELLULES DU TABLEAU */
+
+.structure{
 	font-size: 1em;
 	font-weight: bold;
 	margin: 0px 0px 0px 0px;
 	padding: 3px 0px 0px 0px;
+  color: black;
 }
 
-
-h5{ /* fonction occupée ou visée*/
+.fonction{
 	font-size: 0.9em;
 	font-weight: lighter;
 	font-style: italic;
 	margin: 0px 0px 2px 10px;
 	padding: 0px 0px 0px 0px;
+  color: green;
 }
 
-p{
+.detail{
 	font-size: normal;
 	margin: 0px 0px 2px 0px;
 	padding: 0px 0px 0px 0px;
+  color: gray;
+  font-size: small;
+}
+/* APPROCHE 3 pour la section RECOMMANDATION. Plus de tableau mais Flexbox sur la base de balise html type box (div) */
+
+#recommandation>div{
+	display: flex;
+  margin-top: 5px;
+  margin-left: 8%;
+	font-size: 0.9em;  
+}
+#recommandation>div>em{
+  font-style:italic;
 }
 
-@media screen and (max-width: 1000px) { /*probleme de différence d'affichage entre un ordi et un téléphone pour une meme taille d'écran en px*/
-	h4{
-		font-size: 1em;
-	}
-	h5{
-		font-size: 1em;
-	}
-}
 
 /*dans la section info_perso*/
 
-#photo{
+#photo_ID{
 	margin-left: auto;
 	margin-right: auto;
-	border:3px solid #DAAF12;
+	margin-top: 10px;
+	margin-bottom: auto;
+	margin-bottom: 5px;
+  	border:3px solid #DAAF12;
 	border-radius :50%;
   	width: 120px;
-  	height: 120px;
-  	background: url("evelyne_bastin.jpg") no-repeat top left;
+ 	height: 120px;
+ 	background: url("evelyne_bastin.jpg") no-repeat top left;
 }
 
-h3{ /*titre de section dans les info perso*/
+h3{
 	background-color: #404040;
 	color:#FECA07;
 	padding: 5px 2px 5px 2px;
-	/*margin: 5px 2px 5px 2px;*/
+	margin-top: 0px;
 	text-align: center;
 	vertical-align: center;
 	font-size: 1em;
@@ -188,23 +205,36 @@ ul{
 	padding-bottom: 3px;
 	font-size: 0.9em;
 }
-#a_propos_de_moi{
+p{
 	margin-left: 10px;
 	margin-right: 10px;
 	font-size: 0.9em;
 }
-	
-#loisirs{
-	width: 70%;
-	position: relative;
-	text-align: center;
-	left: 15%;
-	margin-top:5px;
-	margin-bottom: 5px;
+
+#info_perso>div{
+  display: var(--picto-display);
+  padding-left:var(--picto-margin-left);
+  padding-top: var(--picto-padding-top);
+  padding-bottom:var(--picto-padding-bottom);
+  }
+.picto{
+  margin-right:15%;
 }
 
-#recommandations{
-	margin-left: 10%;
-	font-size: 0.8em;
-	width: 80%;
-
+@media screen and (max-width: 1000px){
+   body{
+	 display: flex;
+     flex-direction: column;
+		width: 100%;
+	}
+  #illustration{
+  	display: none;
+  }
+  .nouvel_enreg{
+    width: 100px;
+  }
+  
+  #recommandation>div{
+  	flex-direction: column;
+  }
+  }
