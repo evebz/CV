@@ -11,67 +11,56 @@
     </head>
 
     <body>
-        <header><!-- header comprenant le nom et prénom du CV, poste visé-->
+        <header>
             <h1>
                 <em>Evelyne</em>BASTIN<br>
                 <span>Developpeuse Web Freelance</span> 
             </h1>
         </header>
   
-        <section id="illustration"> 
-        <!--la manipulation de la photo me pose problème. Peut-être parce que tout est défini dans le css (mise en forme et contenu de "photo_ID")? Lorsque je la mets dans la section info_perso:
-         - la mise en forme n'est pas correcte/change (héritage de mise en forme de la section??) 
-         - je ne parviens pas à la "supprimer" dans le cadre d'affiche responsive petit écran-->
-          <div id="photo_ID"></div>
+        <section id="illustration">
+            <div id="photo_ID"></div>
         </section>
-        
+
         <section id="info_perso">
             <h3>contact</h3>
-            <ul>
-            	<li><i class="fas fa-at"></i><a href="mailto:evelyne.bastin.z@gmail.com">evelyne.bastin.z@gmail.com </a></li>
-            	<li><i class="fas fa-phone-alt"></i>06 33 54 09 96</li>
-            	<li><i class="fas fa-map-marker-alt"></i>20 rue de la Colline - 79000 NIORT</li>
-            </ul>
+                <ul>
+                	<li><i class="fas fa-at"></i><a href="mailto:evelyne.bastin.z@gmail.com">evelyne.bastin.z@gmail.com </a></li>
+                	<li><i class="fas fa-phone-alt"></i>06 33 54 09 96</li>
+                	<li><i class="fas fa-map-marker-alt"></i>20 rue de la Colline - 79000 NIORT</li>
+                </ul>
             
             <h3>a propos de moi</h3>
-            <p>blablabla balbla ggg hhhddd</p>
+                <p>blablabla balbla ggg hhhddd</p>
             
             <h3>loisirs</h3>
-          <div>
-            <div class="picto"><i class="fas fa-hiking fa-3x"></i></div>
-            <div class="picto"><img src="https://img.icons8.com/ios-glyphs/50/000000/dancing.png" alt="dancing"></div>
-            <div class="picto"><i class="fas fa-globe-africa fa-3x"></i></div>
-          </div>
+                <div>
+                    <div class="picto"><i class="fas fa-hiking fa-3x"></i></div>
+                    <div class="picto"><img src="https://img.icons8.com/ios-glyphs/50/000000/dancing.png" alt="dancing"></div>
+                    <div class="picto"><i class="fas fa-globe-africa fa-3x"></i></div>
+                </div>
         </section>
 
-<!--contenu principal du CV : formation, expérience professionnelle et recommandations-->
-        <main> 
-          
-            <section id="formation"><!--FORMATION - 1 TABLEAU PAR ENREG.-->  
+        <section id="detail_CV">
 	            <h2><i class="fas fa-graduation-cap fa-1x"></i>Formation</h2>
 	            <table>
-		            <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i><em>2020, Niort</em></td> <td>OpenClassRooms</td></tr>
-			        <tr><td></td><td>Developpeur Web</td></tr>
-		            <tr><td></td><td>Formation en ligne, blablabla</td></tr>
-	            </table>
-	            <table>
-	                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2018, Nantes</td><td>IAE</td></tr>
-	                <tr><td></td><td>Managemenet administration d'entreprise</td></tr>
-		            <tr><td></td><td>Formation, blablabla</td></tr>
-	            </table>
-	            <table>
-	                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2005, Dublin</td><td>Development Studies Center</td></tr>
-	                <tr><td></td><td>Gestion de projet de développement international</td></tr>
-		            <tr><td></td><td>Formation, blablabla</td></tr>
-	            </table>
-	            <table>
-	                <tr><td class="nouvel_enreg"><i class="fas fa-circle"></i>2002, Grenoble</td><td>Institut de Géographie Alpine</td></tr>
-		            <tr><td></td><td>Ingénierie du développement territorial</td></tr>
-		            <tr><td></td><td>Formation, blablabla</td></tr>
-		        </table>	 
-	         </section>
+                    <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i><em>2020, Niort</em></td><td class="structure">OpenClassRooms</td></tr>
+                    <tr><td class="fonction">Developpeur Web</td></tr>
+                    <tr><td class="detail">Formation en ligne, blablabla</td></tr>
+                
+                    <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2018, Nantes</td><td class="structure">IAE</td></tr>
+                    <tr><td class="fonction">Managemenet administration d'entreprise</td></tr>
+                    <tr><td class="detail">Formation, blablabla</td></tr>
+                
+                    <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2005, Dublin</td><td class="structure">Development Studies Center</td></tr>
+                    <tr><td class="fonction">Gestion de projet de développement international</td></tr>
+                    <tr><td class="detail">Formation, blablabla</td></tr>
 
-	    	<section id="exp_pro"> <!--EXPERIENCE PRO - UN SEUL TABLEAU-->             
+                    <tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i>2002, Grenoble</td><td class="structure">Institut de Géographie Alpine</td></tr>
+                    <tr><td class="fonction">Ingénierie du développement territorial</td></tr>
+                    <tr><td class="detail">Formation, blablabla</td></tr>
+                </table>	 
+	                 
             	<h2><i class="fas fa-briefcase fa-1x"></i>Expérience professionnelle</h2>
             	<table>
 	              	<tr><td rowspan="3" class="nouvel_enreg"><i class="fas fa-circle"></i><em>2018 - Auj., Niort</em></td><td class="structure">Prodev-O</td></tr>
@@ -86,19 +75,13 @@
 		            <tr><td class="fonction">Chef de projet</td></tr>
 		            <tr><td class="detail">pleins de choses intéressantes</td></tr>
 	            </table>
-      		</section>
-
-      		<section id="recommandation">      
+      		
             	<h2><i class="fas fa-pencil-alt fa-1x"></i>Recommandations</h2>
             	<div>
               		<p><em>Mr Stephane TORCHY</em><br>fonction<br>contact<br> LinkedIn ou autre ref. sur le web</p><!--div n'est peut-être pas la bonne balise. qu'est ce qu'on peut mettre d'autre-->
               		<p><em>Mr Gabriel GIACOMMETTI</em><br>Directeur Clinique Claude Bernard - Metz<br>contact</p>
             	</div>
-      		</section>
-        </main>
-    
-    </body>
-
+        </section> 
+      </body>
     <footer></footer>
-
 </html>
