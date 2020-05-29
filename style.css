@@ -78,7 +78,7 @@ h1>span{
 /*MISE EN FORME DETAIL CV*/
 
 
-.fa-graduation-cap,.fa-briefcase,.fa-pencil-alt, .fa-circle{ /*picto des parties du CV*/
+.fa-graduation-cap,.fa-briefcase,.fa-pencil-alt, .fa-circle{ /*picto formation, exp.pro, recommandations*/
 	color: #FECA07;
 	padding-right: 1em;
 }
@@ -174,15 +174,10 @@ ul{
 }
 
 
-.info_perso>div{ /*comment faire en sorte que le bloc comprenant les picto soit automatiquement centré sur la colonne de la grille*/
-  margin-left:var(--picto-margin-left);
-  padding-top: var(--picto-padding-top);
-  padding-bottom:var(--picto-padding-bottom);
+.info_perso>div{
+  justify-content: space-around;
 }
 
-.picto{
-  padding-right:10%;
-}
 
 #photo_ID{
 	margin-left: auto;
