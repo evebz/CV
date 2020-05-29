@@ -3,12 +3,6 @@
 	src:url(OpenSans-Regular.ttf);
 	}
 
-:root{
-  	--picto-margin-left:20%;
-  	--picto-padding-top: 5px;
-  	--picto-padding-bottom: 10px;
-}
-
 /*STRUCTURE GENERALE DU CV*/
 
 body{
@@ -59,7 +53,6 @@ h1{
 	font-weight: lighter;
 	padding: 0px 15px 0px 15px;
 	margin-bottom: 0px;
-	text-align: top;
 }
 
 h1>em{
@@ -215,4 +208,5 @@ ul{
   .nouvel_enreg{
     width: 100px;
   }
+}
  
