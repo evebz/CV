@@ -29,7 +29,7 @@ header{
 	grid-row : 2 / span 3;
 }
 
-.illustration, .info_perso{
+.illustration, .info_perso{ /*revoir pour que ce soit plus générique*/
 	background-color: #FECA07;
 	min-width: 220px;
 	overflow-wrap: break-word;
