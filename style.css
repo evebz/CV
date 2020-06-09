@@ -1,0 +1,191 @@
+@font-face{
+	font-family:'ma_police';
+	src:url(OpenSans-Regular.ttf);
+	}
+
+:root{
+	--theme1-color-decor: #FECA07;
+	--theme1-text-color-h:#404040;
+	--text-detail: 0.9em;
+	--text-valorise:1.1em;
+	--text-base:1em;
+	--padding-text-detail:0px 0px 3px 3px;
+}
+
+/*STRUCTURE GENERALE DU CV*/
+
+body{
+	display: grid;
+	grid-template-columns:1fr 3fr; 
+	grid-template-rows: 2fr;
+	font-family: ma_police;
+	color: black;
+  	font-size: var(--text-base);
+}
+
+header{
+	grid-column: 2;
+	grid-row: 1;
+  	display: inline-flex;
+ }
+
+.info_perso{
+	grid-column: 1;
+	grid-row : 1 / span 3;
+  	background-color: var(--theme1-color-decor);
+	min-width: 220px;
+	overflow-wrap: break-word;
+	margin-top: 0px;
+	padding-bottom: 1em;
+}
+.detail_CV{
+	grid-column: 2;
+	grid-row: 2;
+	margin-left: 15px;
+	margin-top: 5px;
+	padding-top: 0px;
+}
+
+
+/*MISE EN FORME HEADER */
+
+h1{
+	font-size: 3em;
+	line-height: 1em;
+	font-weight: lighter;
+	padding: 0px 15px 0px 15px;
+	margin-bottom: 0px;
+}
+
+h1>em{
+	font-weight: bold;
+	color: var(--theme1-color-decor);
+	padding-right: 10px;
+}
+
+h1>span{
+	font-size: x-large;
+	font-weight: normal;
+	margin-left: 2em;
+}
+
+/*MISE EN FORME DETAIL CV*/
+
+
+.fa-graduation-cap,.fa-briefcase,.fa-pencil-alt, .fa-circle{ /*picto formation, exp.pro, recommandations*/
+	color: var(--theme1-color-decor);
+	padding-right: 1em;
+}
+.fa-circle{ /*point pour chaque nouvel enreg.*/
+	font-size: xx-small;
+}
+.detail_CV>div{
+	display: flex;
+}
+
+h3{
+	border-bottom: solid 2px var(--theme1-color-decor);
+	color: var(--theme1-text-color-h);
+	font-size: 2em;
+	margin: 5px 0px 5px 0px;
+}
+table{
+	margin: 0px 0px 15px 5px;
+}
+
+.nv-enreg{
+	width: 150px;
+	font-size: var(--text-detail);
+	vertical-align: top;
+}
+/*nv-enreg:nth-child(1){
+	font-weight: bold;
+}
+Trouver la solution pour que le premier "nv-enreg" d'un tableau soit en gras*/
+
+td:nth-child(n+2){
+	font-weight: bold;
+	font-size: var(--text-valorise);
+}
+
+tr:nth-child(3n+2){
+	color: var(--theme1-text-color-h);
+	font-style: italic;
+}
+
+tr:nth-child(3n+3){
+	font-size: var(--text-detail);
+	padding: var(--padding-text-detail);
+}
+
+/*MISE EN FORME SECTION INFORMATION PERSO*/
+
+#photo_ID{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+	margin-bottom: auto;
+	margin-bottom: 5px;
+  	border:3px solid #DAAF12;
+	border-radius :50%;
+  	width: 120px;
+ 	height: 120px;
+ 	background: url("evelyne_bastin.jpg") no-repeat top left;
+}
+h2{
+	background-color: var(--theme1-text-color-h);
+	color:var(--theme1-color-decor);
+	padding: 5px 2px 5px 2px;
+	margin-top: 0px;
+	text-align: center;
+	vertical-align: center;
+	font-size: var(--text-valorise);
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.fa-at, .fa-phone-alt, .fa-map-marker-alt{ /*picto*/
+	color: var(--theme1-text-color-h);
+	padding: 2px 5px 5px 5px;
+}
+
+ul, p{
+	margin-left: 3%;
+	font-size: var(--text-detail);
+	padding: var(--padding-text-detail)
+}
+
+ul{
+	list-style-type: none;
+}
+
+
+.info_perso>div{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px){
+  body{
+	 display: flex;
+     flex-direction: column;
+	width: 100%;
+	}
+  header{
+  	padding-bottom: 10px;
+  }
+
+#photo_ID{
+  	display: none;
+  }
+
+  .info_perso{
+  	max-width: 100%;
+  	padding-bottom: 10px; 
+  }
+}
+ 
