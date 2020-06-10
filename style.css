@@ -101,7 +101,7 @@ table{
 	font-size: var(--text-detail);
 	vertical-align: top;
 	padding-top: 5px;
-	padding-right: 5px;
+	padding-right: 2px;
 }
 /*nv-enreg:nth-child(1){
 	font-weight: bold;
@@ -192,7 +192,7 @@ ul{
   	padding-bottom: 10px; 
   }
   .nv-enreg{
-	width: 100px;
+	width: 80px;
 	}
 }
  
