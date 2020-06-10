@@ -68,6 +68,7 @@ h1>span{
 	font-size: x-large;
 	font-weight: normal;
 	margin-left: 2em;
+	line-height: 0.9em;
 }
 
 /*MISE EN FORME DETAIL CV*/
@@ -100,6 +101,7 @@ table{
 	font-size: var(--text-detail);
 	vertical-align: top;
 	padding-top: 5px;
+	padding-right: 5px;
 }
 /*nv-enreg:nth-child(1){
 	font-weight: bold;
@@ -189,5 +191,8 @@ ul{
   	max-width: 100%;
   	padding-bottom: 10px; 
   }
+  .nv-enreg{
+	width: 100px;
+	}
 }
  
