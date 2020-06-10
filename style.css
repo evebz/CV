@@ -9,7 +9,8 @@
 	--text-detail: 0.9em;
 	--text-valorise:1.1em;
 	--text-base:1em;
-	--padding-text-detail:0px 0px 3px 3px;
+	--padding-text-detail:0px 0px 5px 3px;
+	--padding-h:5px 2px 5px 2px;
 }
 
 /*STRUCTURE GENERALE DU CV*/
@@ -53,8 +54,8 @@ h1{
 	font-size: 3em;
 	line-height: 1em;
 	font-weight: lighter;
-	padding: 0px 15px 0px 15px;
-	margin-bottom: 0px;
+	padding: var(--padding-h); /* si fonctionne pas voici ce qui était : 0px 15px 0px 15px;*/
+	margin: 15px 0px 0px 10px;
 }
 
 h1>em{
@@ -87,16 +88,18 @@ h3{
 	border-bottom: solid 2px var(--theme1-color-decor);
 	color: var(--theme1-text-color-h);
 	font-size: 2em;
+	padding: var(--padding-h);
 	margin: 5px 0px 5px 0px;
 }
 table{
-	margin: 0px 0px 15px 5px;
+	margin: 5px 5px 15px 5px;
 }
 
 .nv-enreg{
 	width: 150px;
 	font-size: var(--text-detail);
 	vertical-align: top;
+	padding-top: 5px;
 }
 /*nv-enreg:nth-child(1){
 	font-weight: bold;
@@ -106,6 +109,7 @@ Trouver la solution pour que le premier "nv-enreg" d'un tableau soit en gras*/
 td:nth-child(n+2){
 	font-weight: bold;
 	font-size: var(--text-valorise);
+	padding-top: 5px;
 }
 
 tr:nth-child(3n+2){
@@ -115,7 +119,6 @@ tr:nth-child(3n+2){
 
 tr:nth-child(3n+3){
 	font-size: var(--text-detail);
-	padding: var(--padding-text-detail);
 }
 
 /*MISE EN FORME SECTION INFORMATION PERSO*/
@@ -126,7 +129,7 @@ tr:nth-child(3n+3){
   margin-top: 10px;
 	margin-bottom: auto;
 	margin-bottom: 5px;
-  	border:3px solid #DAAF12;
+  	border:3px solid var(--theme1-color-decor);
 	border-radius :50%;
   	width: 120px;
  	height: 120px;
@@ -135,11 +138,10 @@ tr:nth-child(3n+3){
 h2{
 	background-color: var(--theme1-text-color-h);
 	color:var(--theme1-color-decor);
-	padding: 5px 2px 5px 2px;
-	margin-top: 0px;
-	text-align: center;
-	vertical-align: center;
 	font-size: var(--text-valorise);
+	padding: var(--padding-h);
+	margin-top: 0px;
+	text-align: center;	
 	font-weight: normal;
 	text-transform: uppercase;
 }
