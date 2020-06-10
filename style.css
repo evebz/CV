@@ -7,7 +7,7 @@
 	--theme1-color-decor: #FECA07;
 	--theme1-text-color-h:#404040;
 	--text-detail: 0.9em;
-	--text-valorise:1.1em;
+	--text-valorise:1.05em;
 	--text-base:1em;
 	--padding-text-detail:0px 0px 5px 3px;
 	--padding-h:5px 2px 5px 2px;
@@ -54,7 +54,7 @@ h1{
 	font-size: 3em;
 	line-height: 1em;
 	font-weight: lighter;
-	padding: var(--padding-h); /* si fonctionne pas voici ce qui était : 0px 15px 0px 15px;*/
+	padding: var(--padding-h);
 	margin: 15px 0px 0px 10px;
 }
 
@@ -65,10 +65,10 @@ h1>em{
 }
 
 h1>span{
-	font-size: x-large;
+	font-size: large;
 	font-weight: normal;
 	margin-left: 2em;
-	line-height: 0.9em;
+	line-height: 0.8em;
 }
 
 /*MISE EN FORME DETAIL CV*/
@@ -88,7 +88,7 @@ h1>span{
 h3{
 	border-bottom: solid 2px var(--theme1-color-decor);
 	color: var(--theme1-text-color-h);
-	font-size: 2em;
+	font-size: 1.5em;
 	padding: var(--padding-h);
 	margin: 5px 0px 5px 0px;
 }
