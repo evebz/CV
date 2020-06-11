@@ -71,58 +71,6 @@ h1>span{
 	line-height: 0.8em;
 }
 
-/*MISE EN FORME DETAIL CV*/
-
-
-.fa-graduation-cap,.fa-briefcase,.fa-pencil-alt, .fa-circle{ /*picto formation, exp.pro, recommandations*/
-	color: var(--theme1-color-decor);
-	padding-right: 1em;
-}
-.fa-circle{ /*point pour chaque nouvel enreg.*/
-	font-size: xx-small;
-}
-.detail_CV>div{
-	display: flex;
-}
-
-h3{
-	border-bottom: solid 2px var(--theme1-color-decor);
-	color: var(--theme1-text-color-h);
-	font-size: 1.5em;
-	padding: var(--padding-h);
-	margin: 5px 0px 5px 0px;
-}
-table{
-	margin: 5px 5px 15px 5px;
-}
-
-.nv-enreg{
-	width: 150px;
-	font-size: var(--text-detail);
-	vertical-align: top;
-	padding-top: 5px;
-	padding-right: 2px;
-}
-/*nv-enreg:nth-child(1){
-	font-weight: bold;
-}
-Trouver la solution pour que le premier "nv-enreg" d'un tableau soit en gras*/
-
-td:nth-child(n+2){
-	font-weight: bold;
-	font-size: var(--text-valorise);
-	padding-top: 5px;
-}
-
-tr:nth-child(3n+2){
-	color: var(--theme1-text-color-h);
-	font-style: italic;
-}
-
-tr:nth-child(3n+3){
-	font-size: var(--text-detail);
-}
-
 /*MISE EN FORME SECTION INFORMATION PERSO*/
 
 #photo_ID{
@@ -153,20 +101,74 @@ h2{
 	padding: 2px 5px 5px 5px;
 }
 
-ul, p{
+.info_perso ul, p{
 	margin-left: 3%;
 	font-size: var(--text-detail);
 	padding: var(--padding-text-detail)
 }
 
-ul{
+.info_perso ul{
 	list-style-type: none;
 }
 
-
-.info_perso>div{
+.info_perso div{
   display: flex;
   justify-content: space-around;
+}
+
+
+
+/*MISE EN FORME DETAIL CV*/
+
+
+.fa-graduation-cap,.fa-briefcase,.fa-pencil-alt, .fa-circle{ /*picto formation, exp.pro, recommandations*/
+	color: var(--theme1-color-decor);
+	padding-right: 1em;
+}
+.fa-circle{ /*point pour chaque nouvel enreg.*/
+	font-size: xx-small;
+}
+.detail_CV div{
+	display: flex;
+}
+
+h3{
+	border-bottom: solid 2px var(--theme1-color-decor);
+	color: var(--theme1-text-color-h);
+	font-size: 1.5em;
+	padding: var(--padding-h);
+	margin: 5px 0px 5px 0px;
+}
+table{
+	margin: 5px 5px 15px 5px;
+}
+
+.nv-enreg{
+	width: 150px;
+	font-size: var(--text-detail);
+	vertical-align: top;
+	padding-top: 5px;
+	padding-right: 2px;
+}
+
+/*nv-enreg:nth-child(1){
+	font-weight: bold;
+}
+Trouver la solution pour que le premier "nv-enreg" d'un tableau soit en gras*/
+
+td:nth-child(n+2){
+	font-weight: bold;
+	font-size: var(--text-valorise);
+	padding-top: 5px;
+}
+
+tr:nth-child(3n+2){
+	color: var(--theme1-text-color-h);
+	font-style: italic;
+}
+
+tr:nth-child(3n+3){
+	font-size: var(--text-detail);
 }
 
 
